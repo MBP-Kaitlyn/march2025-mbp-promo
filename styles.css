@@ -1,0 +1,443 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+/* Hero*/
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#hero video {
+    height: 100%;
+    width: 100%;
+    background-position: absolute;
+    z-index: 1;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+#hero .content {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero .content h1 {
+    color: #fff;
+    font-size: 48px;
+    padding: 200px 30px 30px;
+}
+
+#hero .content h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 12px;
+    color: #555;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none !important;
+}
+
+.top-menu-label {
+    color: #404040;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.top-menu-label:hover,
+.top-menu-label:focus,
+.top-menu-label:active {
+    color: #0079c2;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #0079c2;
+    color: #f9f9f9 !important;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;  /* Adjust padding for proper spacing */
+    border: none;
+    border-radius: 25px; /* Makes it rounded */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds soft shadow */
+    transition: all 0.1s ease-in-out; /* Smooth hover effect */
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #007aff; /* Lighter on hover */
+}
+
+/* Underline */
+.underline {
+    position: relative;
+    display: inline-block;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust how close the underline is */
+    width: 100%;
+    height: 10px; /* Adjust thickness */
+    background: url( https://raw.githubusercontent.com/MBP-Kaitlyn/march2025-mbp-promo/main/handwriting_underline.png ) no-repeat center;
+    background-size: contain;
+}
+
+/* Trusted Media Section */
+#trusted-media {
+    text-align: center;
+    padding: 200px 150px;
+    background: #f9f9f9;
+}
+
+#trusted-media h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+/* Grid Layout for Logos */
+.media-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Style for Each Media Logo Block */
+.media-item {
+    text-align: center;
+    width: 300px; /* Fixed width for consistency */
+    height: 100px; /* Fixed height for all logos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top:50px;
+}
+
+
+/* Standardize Logo Size */
+.media-item img {
+    width: 100%; /* Make all logos the same width */
+    height: 100%; /* Ensure they fit the container */
+    object-fit: contain; /* Keeps original aspect ratio without cropping */
+    filter: grayscale(100%); /* Keep logos in grey */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect: Add Shadow */
+.media-item:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+
+#product-showcase {
+    background-color: #031D2D;
+    color: #fff;
+}
+
+/* Different Background Colors for Each Product */
+.product-1 { background: #1E3A5F; }
+.product-2 { background: #354F73; }
+.product-3 { background: #4A6585; }
+
+/* Individual Product Section */
+.product {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    padding: 200px 10%;
+    min-height: 400vh;
+    position: relative;
+}
+
+/* Sticky Wrapper */
+.sticky-container {
+    position: sticky;
+    top: 150px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Sticky Title */
+.sticky-title {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Video Container */
+.video-container {
+    width: 480px; 
+    height: 540px;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Product 3 Larger Video */
+.product-3 .video-container {
+    width: 960px;
+    height: 540px;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Video */
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark Overlay */
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 30% opacity */
+    pointer-events: none; /* Allows interaction with the video */
+}
+
+/* Features Section */
+.features {
+    flex: 1;
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+/* Sticky Product Image */
+.product-image {
+    width: 150px;
+    height: auto;
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Product 2 Image on the Left */
+.product-2 .product-image {
+    left: 5px;
+}
+
+/* Features List */
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Feature Items - Initially Hidden */
+.features ul li {
+    font-size: 48px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    opacity: 0; /* Start fully hidden */
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    background: #0079c2; /* Mapei's blue */
+    color: white;
+    padding: 80px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.cta-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.cta-section .btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background: white;
+    color: #0079c2 !important;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cta-section .btn-primary:hover {
+    background: #005a90;
+    color: white;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 5px;
+        font-size: 12px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .top-menu-label {
+        display: none;
+    }
+
+    .btn {
+        font-size: 12px;
+        font-weight: bold;
+        padding: 8px 12px;  /* Adjust padding for proper spacing */
+    }
+
+    #hero .content h1 {
+        color: #fff;
+        font-size: 24px;
+        padding: 50px 10px 10px 120px;
+    }
+
+    #hero .content h2 {
+        font-size: 16px;
+        padding-left: 100px;
+        padding-right: 10px;
+    }
+
+    #hero .video {
+        height: 200%;
+    }
+
+    #hero .content {
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+    .media-logos {
+        grid-template-columns: repeat(2, 1fr); /* 1 column on mobile */
+    }
+
+    .media-item {
+        text-align: center;
+        width: 200px; /* Fixed width for consistency */
+        height: 100px; /* Fixed height for all logos */
+        margin-top:20px;
+    }
+
+    .product {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 100px 5%;
+    }
+
+    .video-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .product.center .video-container {
+        width: 100%;
+    }
+
+    .features {
+        max-width: 100%;
+    }
+
+    .product.center .features {
+        flex-direction: column;
+    }
+
+    .product::before {
+        width: 300px;
+        height: 300px;
+    }
+
+
+}
